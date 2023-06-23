@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "companies",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "product",
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "company",
     "description": ""
   },
   "options": {
@@ -15,13 +15,17 @@
     "name": {
       "type": "string"
     },
-    "description": {
+    "phone": {
       "type": "string"
     },
-    "detail_product": {
+    "address": {
+      "type": "string"
+    },
+    "user_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::detail-product.detail-product"
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "company_id"
     }
   }
 }

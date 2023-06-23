@@ -4,7 +4,8 @@
   "info": {
     "singularName": "maintenance-type",
     "pluralName": "maintenance-types",
-    "displayName": "maintenance_type"
+    "displayName": "maintenance_type",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,15 +21,10 @@
     "maintenance_type": {
       "type": "string"
     },
-    "created_by_id": {
+    "company_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
-    "updated_by_id": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "api::company.company"
     }
   }
 }
