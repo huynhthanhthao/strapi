@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trucks",
+  "info": {
+    "singularName": "truck",
+    "pluralName": "trucks",
+    "displayName": "truck"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "truck_code": {
+      "type": "string"
+    },
+    "truck_no": {
+      "type": "integer"
+    }
+  }
+}

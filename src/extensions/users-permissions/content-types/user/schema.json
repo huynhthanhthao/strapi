@@ -65,9 +65,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "user_type_id": {
-      "type": "integer"
-    },
     "role_system": {
       "type": "enumeration",
       "enum": [
@@ -117,6 +114,11 @@
       "relation": "oneToOne",
       "target": "api::company.company",
       "mappedBy": "user_id"
+    },
+    "user_type_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-type.user-type"
     }
   }
 }

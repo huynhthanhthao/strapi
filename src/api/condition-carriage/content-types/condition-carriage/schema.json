@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "condition_carriages",
+  "info": {
+    "singularName": "condition-carriage",
+    "pluralName": "condition-carriages",
+    "displayName": "condition_carriage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "name": {
+      "type": "string"
+    },
+    "short_code": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "time_start": {
+      "type": "datetime"
+    },
+    "time_end": {
+      "type": "datetime"
+    },
+    "product_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "cre_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "upd_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

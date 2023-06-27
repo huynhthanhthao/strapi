@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "route_has_fees",
+  "info": {
+    "singularName": "route-has-fee",
+    "pluralName": "route-has-fees",
+    "displayName": "route_fee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "note": {
+      "type": "string"
+    },
+    "cre_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "upd_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "route_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "truck_maintenances",
+  "info": {
+    "singularName": "truck-maintenance",
+    "pluralName": "truck-maintenances",
+    "displayName": "truck_maintenance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "maintenance_date": {
+      "type": "datetime"
+    },
+    "cre_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "upd_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "maintenance_type_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::maintenance-type.maintenance-type"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "from_date": {
+      "type": "datetime"
+    },
+    "to_date": {
+      "type": "datetime"
+    },
+    "truck_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::truck.truck"
+    }
+  }
+}
